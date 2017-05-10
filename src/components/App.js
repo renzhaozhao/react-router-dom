@@ -17,10 +17,6 @@ const About = () => (
   </div>
 )
 
-
-
-
-
 const BasicExample = () => (
   <Router>
     <div>
