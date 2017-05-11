@@ -9,7 +9,7 @@ const Topic = ({ match }) => (
 )
 
 const Topics = ({ match }) => (
-  <div>
+  <div className="container">
     <h2>Topics</h2>
     <div className="siderbar">
       <NavLink to={`${match.url}/rendering`}>
