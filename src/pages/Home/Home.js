@@ -1,9 +1,26 @@
-import React from 'react'
+import React, { Component } from 'react'
+import App from '../../components/App'
 
-const Home = () => (
-  <div className="container">
-    <h2>Home</h2>
-  </div>
-)
+class Home extends Component {
+  state = {
+    number: 1
+  }
+
+  handleClick = () => {
+    const number = this.state.number + 1
+    this.setState({ number })
+  }
+
+  render() {
+    return (
+      <div className="container">
+        <App />
+        <div>{this.state.number}</div>
+        <button onClick={this.handleClick}>+++</button>
+        <div>test</div>
+      </div>
+    )
+  }
+}
 
 export default Home
