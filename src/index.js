@@ -1,15 +1,22 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { AppContainer } from 'react-hot-loader'
+import { createStore } from 'redux'
+import { Provider } from 'react-redux'
+import reducer from './reducers'
 
 import App from './App'
 import './index.scss'
+
+const store = createStore(reducer)
 
 
 const render = (Component) => {
   ReactDOM.render(
     <AppContainer>
-      <Component />
+      <Provider store={store}>
+        <Component />
+      </Provider>
     </AppContainer>,
     document.getElementById('root')
   )
@@ -23,7 +30,9 @@ if (module.hot) {
     const NextApp = require('./App').default
     ReactDOM.render(
       <AppContainer>
-        <NextApp />
+        <Provider store={store}>
+          <NextApp />
+        </Provider>
       </AppContainer>,
       document.getElementById('root')
     )

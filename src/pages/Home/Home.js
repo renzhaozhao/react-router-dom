@@ -17,7 +17,14 @@ class Home extends Component {
         <App />
         <div>{this.state.number}</div>
         <button onClick={this.handleClick}>+++</button>
-        <div>test</div>
+        <div style={{ height: 300 }}>test阿萨德阿萨德阿萨德</div>
+        <div style={{ height: 300 }}>test阿萨德阿萨德阿萨德</div>
+        <div style={{ height: 300 }}>test阿萨德阿萨德阿萨德</div>
+        <div style={{ height: 300 }}>test阿萨德阿萨德阿萨德</div>
+        <div style={{ height: 300 }}>test阿萨德阿萨德阿萨德</div>
+        <div style={{ height: 300 }}>test阿萨德阿萨德阿萨德</div>
+        <div style={{ height: 300 }}>test阿萨德阿萨德阿萨德</div>
+        <div style={{ height: 300 }}>test阿萨德阿萨德阿萨德</div>
       </div>
     )
   }
