@@ -11,7 +11,7 @@ import './index.scss'
 const store = createStore(reducer)
 
 
-const render = (Component) => {
+const render = Component => {
   ReactDOM.render(
     <AppContainer>
       <Provider store={store}>
