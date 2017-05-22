@@ -1,0 +1,27 @@
+$blue: #14b9d6;
+
+.vp-pagination {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+  overflow: hidden;
+  margin: 10px 0;
+
+  & > li {
+    float: left;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    border-radius: 50%;
+    border: 1px solid #a3a4a6;
+    color: #afb0b2;
+    margin: 0 5px;
+    cursor: pointer;
+
+    &.active{
+      border-color: $blue;
+      color: $blue;
+    }
+  }
+}

@@ -1,9 +1,14 @@
 import React, { Component } from 'react'
 import App from '../../components/App'
+import Pagination from '../../components/Pagination'
 
 class Home extends Component {
   state = {
-    number: 1
+    number: 12
+  }
+
+  onChange = page => {
+    console.log(page)
   }
 
   handleClick = () => {
@@ -13,18 +18,14 @@ class Home extends Component {
 
   render() {
     return (
-      <div className="container">
+      <div className="container" style={{ background: '#2a2f34', padding: 10 }}>
         <App />
         <div>{this.state.number}</div>
         <button onClick={this.handleClick}>+++</button>
-        <div style={{ height: 300 }}>test阿萨德阿萨德阿萨德</div>
-        <div style={{ height: 300 }}>test阿萨德阿萨德阿萨德</div>
-        <div style={{ height: 300 }}>test阿萨德阿萨德阿萨德</div>
-        <div style={{ height: 300 }}>test阿萨德阿萨德阿萨德</div>
-        <div style={{ height: 300 }}>test阿萨德阿萨德阿萨德</div>
-        <div style={{ height: 300 }}>test阿萨德阿萨德阿萨德</div>
-        <div style={{ height: 300 }}>test阿萨德阿萨德阿萨德</div>
-        <div style={{ height: 300 }}>test阿萨德阿萨德阿萨德</div>
+        <Pagination
+          onChange={this.onChange}
+          total={50}
+        />
       </div>
     )
   }
